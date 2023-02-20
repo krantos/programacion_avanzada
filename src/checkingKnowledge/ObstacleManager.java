@@ -1,12 +1,12 @@
 package checkingKnowledge;
 
-import static checkingKnowledge.Constants.KRoad.*;
+import static checkingKnowledge.Constants.GameWindow.GAME_HEIGHT;
+import static checkingKnowledge.Constants.GameWindow.TILE_SIZE;
+import static checkingKnowledge.Constants.KRoad.LEFT_LIMIT;
+import static checkingKnowledge.Constants.KRoad.RIGHT_LIMIT;
 
 import java.awt.Graphics;
 import java.util.ArrayList;
-import java.util.concurrent.atomic.AtomicBoolean;
-
-import static checkingKnowledge.Constants.GameWindow.*;
 
 public class ObstacleManager implements Drawable {
 	
