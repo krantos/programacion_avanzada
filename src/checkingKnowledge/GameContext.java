@@ -24,7 +24,8 @@ public class GameContext {
 		play();
 	}
 	
-	public void gameOver() {
+	public void gameOver(int points) {
+		gameOver.setPoints(points);
 		gameState = gameOver;
 	}
 	

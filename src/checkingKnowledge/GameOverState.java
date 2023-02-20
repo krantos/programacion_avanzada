@@ -7,6 +7,8 @@ import java.awt.Graphics;
 import java.awt.event.KeyEvent;
 
 public class GameOverState implements State {
+	
+	private int points;
 
 	@Override
 	public void keyPressed(KeyEvent e) {
@@ -28,7 +30,12 @@ public class GameOverState implements State {
 	public void render(Graphics g) {
 		g.setColor(Color.BLACK);
 		g.drawString("Game Over", TILE_SIZE, TILE_SIZE);
-		g.drawString("Press Spacebar to Restart", TILE_SIZE, TILE_SIZE * 2);
+		g.drawString("Your Score was: " + points, TILE_SIZE, TILE_SIZE * 3);
+		g.drawString("Press Spacebar to Restart", TILE_SIZE, TILE_SIZE * 5);
+	}
+
+	public void setPoints(int points) {
+		this.points = points;
 	}
 
 }

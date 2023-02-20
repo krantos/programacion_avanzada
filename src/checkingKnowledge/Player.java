@@ -15,11 +15,9 @@ public class Player extends Hitbox implements Drawable {
 	
 	private int speedX  = 0;
 	private int speedY = 0;
-	private Road road;
 	
-	public Player(Road road) {
-		super((int)((RIGHT_LIMIT - LEFT_LIMIT) / 2), GAME_HEIGHT - TILE_SIZE, TILE_SIZE, TILE_SIZE);
-		this.road = road;
+	public Player() {
+		super((int)((RIGHT_LIMIT - LEFT_LIMIT) / 2), GAME_HEIGHT - TILE_SIZE - 2, TILE_SIZE, TILE_SIZE);
 		initHitbox(x, y, TILE_SIZE, TILE_SIZE);
 		setOffsets(0, 0);
 	}

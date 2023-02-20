@@ -9,6 +9,7 @@ public class PlayingState implements State {
 	private ArrayList<Drawable> entities;
 	private ObstacleManager obstacles;
 	private Player player;
+	private Points points;
 	private Road road;
 	
 	public PlayingState() {
@@ -18,21 +19,25 @@ public class PlayingState implements State {
 	private void createEntities() {
 		entities = new ArrayList<>();
 		road = new Road();
-		player = new Player(road);
-		obstacles = new ObstacleManager(2);
+		player = new Player();
+		points = new Points();
+		obstacles = new ObstacleManager(points);
 		entities.add(player);
 		entities.add(road);
+		entities.add(points);
 		entities.add(obstacles);
 	}
 
 	@Override
 	public void update() {
+		obstacles.resume();
 		for(Drawable e : entities) {
 			e.update();
 		}
 		if(playerHit()) {
-			ContextSingleton.getContext().gameOver();
-		}
+			obstacles.destroy();
+			ContextSingleton.getContext().gameOver(points.getScore());
+		} 
 	}
 	
 	private boolean playerHit() {
@@ -52,9 +57,10 @@ public class PlayingState implements State {
 
 	@Override
 	public void keyPressed(KeyEvent e) {
-		switch(e.getKeyCode()) {
-		case KeyEvent.VK_ESCAPE:
+		if(e.getKeyCode() == KeyEvent.VK_ESCAPE) {
+			obstacles.pause();
 			ContextSingleton.getContext().pause();
+			return;
 		}
 		player.keyPressed(e);
 	}

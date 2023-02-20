@@ -27,6 +27,7 @@ public class GamePanel extends JPanel {
 	
 	public void paintComponent(Graphics g) {
 		super.paintComponent(g);
+		g.setColor(Color.DARK_GRAY);
 		g.setFont(new Font(Font.MONOSPACED, Font.PLAIN, (int)FONT_SIZE));
 		GameContext gameContext = ContextSingleton.getContext();
 		gameContext.getState().render(g);
