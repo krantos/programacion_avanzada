@@ -1,10 +1,10 @@
 package checkingKnowledge;
 
+import static checkingKnowledge.Constants.GameWindow.TILE_SIZE;
+
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.event.KeyEvent;
-
-import static checkingKnowledge.Constants.GameWindow.TILE_SIZE;
 
 public class PauseState implements State {
 

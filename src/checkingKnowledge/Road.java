@@ -1,10 +1,11 @@
 package checkingKnowledge;
 
+import static checkingKnowledge.Constants.GameWindow.GAME_HEIGHT;
+import static checkingKnowledge.Constants.KRoad.LEFT_LIMIT;
+import static checkingKnowledge.Constants.KRoad.RIGHT_LIMIT;
+
 import java.awt.Color;
 import java.awt.Graphics;
-
-import static checkingKnowledge.Constants.KRoad.*;
-import static checkingKnowledge.Constants.GameWindow.*;
 
 public class Road implements Drawable {
 

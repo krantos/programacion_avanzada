@@ -1,9 +1,6 @@
 package checkingKnowledge;
 
 
-import java.awt.event.WindowEvent;
-import java.awt.event.WindowFocusListener;
-
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 

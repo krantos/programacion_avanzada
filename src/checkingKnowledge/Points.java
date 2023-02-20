@@ -1,6 +1,7 @@
 package checkingKnowledge;
 
-import static checkingKnowledge.Constants.GameWindow.*;
+import static checkingKnowledge.Constants.GameWindow.GAME_WIDTH;
+import static checkingKnowledge.Constants.GameWindow.TILE_SIZE;
 
 import java.awt.Graphics;
 
