@@ -87,7 +87,7 @@ public class ObstacleManager implements Drawable {
 			Thread thisThread = Thread.currentThread();
 			while(worker == thisThread) {
 				try {					
-					Thread.sleep(400);
+					Thread.sleep(250);
 					synchronized (this) {
 						while(threadSuspended) {
 							wait();

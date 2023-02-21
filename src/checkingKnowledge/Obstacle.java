@@ -5,7 +5,7 @@ import java.awt.Graphics;
 
 public class Obstacle extends Hitbox implements Drawable {
 	
-	private int points = 10;
+	private int points = 2;
 
 	public Obstacle(int x, int y, int width, int height) {
 		super(x, y, width, height);

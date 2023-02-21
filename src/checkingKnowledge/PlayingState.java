@@ -24,20 +24,20 @@ public class PlayingState implements State {
 		obstacles = new ObstacleManager(points);
 		entities.add(player);
 		entities.add(road);
-		entities.add(points);
 		entities.add(obstacles);
+		entities.add(points);
 	}
 
 	@Override
 	public void update() {
-		obstacles.resume();
-		for(Drawable e : entities) {
-			e.update();
-		}
 		if(playerHit()) {
 			obstacles.destroy();
 			ContextSingleton.getContext().gameOver(points.getScore());
 		} 
+		obstacles.resume();
+		for(Drawable e : entities) {
+			e.update();
+		}
 	}
 	
 	private boolean playerHit() {
