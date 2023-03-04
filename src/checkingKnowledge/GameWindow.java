@@ -1,13 +1,11 @@
 package checkingKnowledge;
 
-
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 public class GameWindow {
-	
-	private JFrame jFrame;
 
+	private JFrame jFrame;
 
 	GameWindow(JPanel jPanel) {
 		jFrame = new JFrame("My Game");

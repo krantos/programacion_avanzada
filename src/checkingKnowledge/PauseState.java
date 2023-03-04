@@ -10,7 +10,7 @@ public class PauseState implements State {
 
 	@Override
 	public void update() {
-		
+
 	}
 
 	@Override
@@ -21,14 +21,14 @@ public class PauseState implements State {
 
 	@Override
 	public void keyPressed(KeyEvent e) {
-		if(e.getKeyCode() == KeyEvent.VK_ESCAPE) {			
+		if (e.getKeyCode() == KeyEvent.VK_ESCAPE) {
 			ContextSingleton.getContext().play();
 		}
 	}
 
 	@Override
 	public void keyReleased(KeyEvent e) {
-		
+
 	}
 
 }

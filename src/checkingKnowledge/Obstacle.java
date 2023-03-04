@@ -4,7 +4,7 @@ import java.awt.Color;
 import java.awt.Graphics;
 
 public class Obstacle extends Hitbox implements Drawable {
-	
+
 	private int points = 2;
 
 	public Obstacle(int x, int y, int width, int height) {
@@ -20,9 +20,9 @@ public class Obstacle extends Hitbox implements Drawable {
 	@Override
 	public void draw(Graphics g) {
 		g.setColor(Color.DARK_GRAY);
-		g.fillRect((int)hitbox.x, (int)hitbox.y, width, height);
+		g.fillRect((int) hitbox.x, (int) hitbox.y, width, height);
 	}
-	
+
 	public int getPoints() {
 		return points;
 	}

@@ -9,10 +9,9 @@ import java.awt.Graphics;
 
 public class Road implements Drawable {
 
-
 	@Override
 	public void update() {
-		
+
 	}
 
 	@Override

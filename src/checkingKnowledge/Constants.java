@@ -12,18 +12,18 @@ public class Constants {
 		public static int GAME_WIDTH = TILE_SIZE * TILES_IN_WIDTH;
 		public static int GAME_HEIGHT = TILE_SIZE * TILES_IN_HEIGHT;
 	}
-	
+
 	public static class KGameLogic {
-		public static int GRAVITY = (int)1.5f * Constants.GameWindow.SCALE;
+		public static int GRAVITY = (int) 1.5f * Constants.GameWindow.SCALE;
 	}
-	
+
 	public static class Kplayer {
-		public static int SPEED = (int)2.5f * Constants.GameWindow.SCALE;
+		public static int SPEED = (int) 2.5f * Constants.GameWindow.SCALE;
 	}
-	
+
 	public static class KRoad {
-		public static int LEFT_LIMIT = (int)Constants.GameWindow.TILE_SIZE * 2;
-		public static int RIGHT_LIMIT = (int)Constants.GameWindow.TILE_SIZE * 10;
+		public static int LEFT_LIMIT = (int) Constants.GameWindow.TILE_SIZE * 2;
+		public static int RIGHT_LIMIT = (int) Constants.GameWindow.TILE_SIZE * 10;
 	}
-	
+
 }

@@ -19,16 +19,16 @@ public class GamePanel extends JPanel {
 		requestFocusInWindow();
 		setSize();
 	}
-	
+
 	private void setSize() {
 		Dimension size = new Dimension(GAME_WIDTH, GAME_HEIGHT);
 		setPreferredSize(size);
 	}
-	
+
 	public void paintComponent(Graphics g) {
 		super.paintComponent(g);
 		g.setColor(Color.DARK_GRAY);
-		g.setFont(new Font(Font.MONOSPACED, Font.PLAIN, (int)FONT_SIZE));
+		g.setFont(new Font(Font.MONOSPACED, Font.PLAIN, (int) FONT_SIZE));
 		GameContext gameContext = ContextSingleton.getContext();
 		gameContext.getState().render(g);
 	}

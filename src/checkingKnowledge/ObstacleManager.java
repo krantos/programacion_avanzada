@@ -9,41 +9,41 @@ import java.awt.Graphics;
 import java.util.ArrayList;
 
 public class ObstacleManager implements Drawable {
-	
+
 	private ArrayList<Obstacle> obstacles;
 	private Points points;
 	private ObstacleCreator obstacleCreator;
-	
+
 	public ObstacleManager(Points points) {
 		this.points = points;
 		obstacles = new ArrayList<>();
 		obstacleCreator = new ObstacleCreator();
 		obstacleCreator.start();
 	}
-	
+
 	public void destroy() {
 		obstacleCreator.stop();
 	}
-	
+
 	public void pause() {
-		if(!obstacleCreator.threadSuspended)
+		if (!obstacleCreator.threadSuspended)
 			obstacleCreator.mySuspend();
 	}
-	
+
 	public void resume() {
-		if(obstacleCreator.threadSuspended)
+		if (obstacleCreator.threadSuspended)
 			obstacleCreator.myResume();
 	}
-	
+
 	public ArrayList<Obstacle> getObstacles() {
 		return this.obstacles;
 	}
 
 	@Override
 	public void update() {
-		for(int i = 0; i < obstacles.size(); i++) {
+		for (int i = 0; i < obstacles.size(); i++) {
 			obstacles.get(i).update();
-			if(obstacles.get(i).hitbox.y > GAME_HEIGHT) {
+			if (obstacles.get(i).hitbox.y > GAME_HEIGHT) {
 				points.increaseBy(obstacles.get(i).getPoints());
 				obstacles.remove(i);
 			}
@@ -52,31 +52,31 @@ public class ObstacleManager implements Drawable {
 
 	@Override
 	public void draw(Graphics g) {
-		for(Obstacle o : obstacles) {
+		for (Obstacle o : obstacles) {
 			o.draw(g);
 		}
 	}
-	
+
 	class ObstacleCreator implements Runnable {
-		
+
 		private Thread worker;
 		protected boolean threadSuspended = false;
-				
+
 		public void stop() {
 			worker = null;
 		}
-		
+
 		synchronized void mySuspend() {
 			threadSuspended = true;
 		}
-		
+
 		synchronized void myResume() {
 			threadSuspended = false;
 			notify();
 		}
-		
+
 		public void start() {
-			if(worker == null) {
+			if (worker == null) {
 				worker = new Thread(this);
 				worker.start();
 			}
@@ -85,19 +85,20 @@ public class ObstacleManager implements Drawable {
 		@Override
 		public void run() {
 			Thread thisThread = Thread.currentThread();
-			while(worker == thisThread) {
-				try {					
+			while (worker == thisThread) {
+				try {
 					Thread.sleep(250);
 					synchronized (this) {
-						while(threadSuspended) {
+						while (threadSuspended) {
 							wait();
 						}
 					}
 				} catch (Exception e) {
 					System.out.println("Error: " + e.getMessage());
-					Thread.currentThread().interrupt();					
+					Thread.currentThread().interrupt();
 				}
-				Obstacle o = new Obstacle((int)(LEFT_LIMIT +  Math.random() * ((RIGHT_LIMIT - LEFT_LIMIT - TILE_SIZE) + 1)), -TILE_SIZE, TILE_SIZE, TILE_SIZE);
+				Obstacle o = new Obstacle((int) (LEFT_LIMIT + Math.random() * ((RIGHT_LIMIT - LEFT_LIMIT - TILE_SIZE) + 1)),
+				    -TILE_SIZE, TILE_SIZE, TILE_SIZE);
 				obstacles.add(o);
 			}
 		}

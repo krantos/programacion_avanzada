@@ -5,17 +5,17 @@ import java.awt.event.KeyEvent;
 import java.util.ArrayList;
 
 public class PlayingState implements State {
-	
+
 	private ArrayList<Drawable> entities;
 	private ObstacleManager obstacles;
 	private Player player;
 	private Points points;
 	private Road road;
-	
+
 	public PlayingState() {
 		createEntities();
 	}
-	
+
 	private void createEntities() {
 		entities = new ArrayList<>();
 		road = new Road();
@@ -30,19 +30,19 @@ public class PlayingState implements State {
 
 	@Override
 	public void update() {
-		if(playerHit()) {
+		if (playerHit()) {
 			obstacles.destroy();
 			ContextSingleton.getContext().gameOver(points.getScore());
-		} 
+		}
 		obstacles.resume();
-		for(Drawable e : entities) {
+		for (Drawable e : entities) {
 			e.update();
 		}
 	}
-	
+
 	private boolean playerHit() {
-		for(Obstacle o : obstacles.getObstacles()) {
-			if(player.hitbox.intersects(o.hitbox))
+		for (Obstacle o : obstacles.getObstacles()) {
+			if (player.hitbox.intersects(o.hitbox))
 				return true;
 		}
 		return false;
@@ -50,14 +50,14 @@ public class PlayingState implements State {
 
 	@Override
 	public void render(Graphics g) {
-		for(Drawable e: entities) {
+		for (Drawable e : entities) {
 			e.draw(g);
 		}
 	}
 
 	@Override
 	public void keyPressed(KeyEvent e) {
-		if(e.getKeyCode() == KeyEvent.VK_ESCAPE) {
+		if (e.getKeyCode() == KeyEvent.VK_ESCAPE) {
 			obstacles.pause();
 			ContextSingleton.getContext().pause();
 			return;

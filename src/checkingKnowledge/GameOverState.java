@@ -7,23 +7,23 @@ import java.awt.Graphics;
 import java.awt.event.KeyEvent;
 
 public class GameOverState implements State {
-	
+
 	private int points;
 
 	@Override
 	public void keyPressed(KeyEvent e) {
-		if(e.getKeyCode() == KeyEvent.VK_SPACE)
+		if (e.getKeyCode() == KeyEvent.VK_SPACE)
 			ContextSingleton.getContext().restart();
 	}
 
 	@Override
 	public void keyReleased(KeyEvent e) {
-		
+
 	}
 
 	@Override
 	public void update() {
-		
+
 	}
 
 	@Override
