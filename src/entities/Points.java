@@ -1,7 +1,7 @@
-package checkingKnowledge;
+package entities;
 
-import static checkingKnowledge.Constants.GameWindow.GAME_WIDTH;
-import static checkingKnowledge.Constants.GameWindow.TILE_SIZE;
+import static utliz.Constants.GameWindow.GAME_WIDTH;
+import static utliz.Constants.GameWindow.TILE_SIZE;
 
 import java.awt.Color;
 import java.awt.Graphics;

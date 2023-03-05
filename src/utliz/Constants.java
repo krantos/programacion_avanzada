@@ -1,4 +1,4 @@
-package checkingKnowledge;
+package utliz;
 
 public class Constants {
 

@@ -1,4 +1,4 @@
-package checkingKnowledge;
+package entities;
 
 import java.awt.Graphics;
 

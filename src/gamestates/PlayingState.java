@@ -1,8 +1,16 @@
-package checkingKnowledge;
+package gamestates;
 
 import java.awt.Graphics;
 import java.awt.event.KeyEvent;
 import java.util.ArrayList;
+
+import entities.Drawable;
+import entities.Obstacle;
+import entities.ObstacleManager;
+import entities.Player;
+import entities.Points;
+import entities.Road;
+import game.ContextSingleton;
 
 public class PlayingState implements State {
 
@@ -42,7 +50,7 @@ public class PlayingState implements State {
 
 	private boolean playerHit() {
 		for (Obstacle o : obstacles.getObstacles()) {
-			if (player.hitbox.intersects(o.hitbox))
+			if (player.getHitbox().intersects(o.getHitbox()))
 				return true;
 		}
 		return false;

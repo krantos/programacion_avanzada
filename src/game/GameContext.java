@@ -1,4 +1,9 @@
-package checkingKnowledge;
+package game;
+
+import gamestates.GameOverState;
+import gamestates.PauseState;
+import gamestates.PlayingState;
+import gamestates.State;
 
 public class GameContext {
 
