@@ -1,10 +1,10 @@
 package entities;
 
+import static utliz.Constants.GameEngine.DELTA_TIME;
 import static utliz.Constants.GameWindow.GAME_HEIGHT;
 import static utliz.Constants.GameWindow.TILE_SIZE;
 import static utliz.Constants.KRoad.LEFT_LIMIT;
 import static utliz.Constants.KRoad.RIGHT_LIMIT;
-import static utliz.Constants.GameEngine.*;
 
 import java.awt.Graphics;
 import java.util.ArrayList;

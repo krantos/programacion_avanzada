@@ -1,7 +1,7 @@
 package utliz;
 
 public class Constants {
-	
+
 	public static class GameEngine {
 		public static final int FPS = 60;
 		public static final double CLOCK_TIME = 1000000000.0 / FPS;
@@ -28,8 +28,8 @@ public class Constants {
 	}
 
 	public static class KRoad {
-		public static int LEFT_LIMIT = (int) Constants.GameWindow.TILE_SIZE * 2;
-		public static int RIGHT_LIMIT = (int) Constants.GameWindow.TILE_SIZE * 10;
+		public static int LEFT_LIMIT = Constants.GameWindow.TILE_SIZE * 2;
+		public static int RIGHT_LIMIT = Constants.GameWindow.TILE_SIZE * 10;
 	}
 
 }

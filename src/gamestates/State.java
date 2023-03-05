@@ -7,7 +7,7 @@ import inputs.KeyboardInterface;
 public interface State  extends KeyboardInterface{
 
 	public void update();
-	
+
 	public void render(Graphics g);
-	
+
 }

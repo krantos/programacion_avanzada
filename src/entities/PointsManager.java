@@ -4,7 +4,6 @@ import static utliz.Constants.GameWindow.GAME_WIDTH;
 import static utliz.Constants.GameWindow.TILE_SIZE;
 import static utliz.Constants.KRoad.RIGHT_LIMIT;
 
-
 import java.awt.Color;
 import java.awt.Graphics;
 
@@ -26,10 +25,10 @@ public class PointsManager implements Drawable {
 	public void draw(Graphics g) {
 
 		g.setColor(Color.LIGHT_GRAY);
-		g.fillRect(GAME_WIDTH - TILE_SIZE * 10, (int) (TILE_SIZE / 4), TILE_SIZE * 2, TILE_SIZE);
+		g.fillRect(GAME_WIDTH - TILE_SIZE * 10, TILE_SIZE / 4, TILE_SIZE * 2, TILE_SIZE);
 		g.setColor(Color.DARK_GRAY);
 		g.drawString(String.format("%04d", points.getPoints()), GAME_WIDTH - TILE_SIZE * 10, TILE_SIZE);
-		
+
 		g.drawString(prevPoints.toString(), RIGHT_LIMIT + TILE_SIZE, TILE_SIZE * 2);
 	}
 
