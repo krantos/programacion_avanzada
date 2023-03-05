@@ -30,7 +30,7 @@ public class PointsManager implements Drawable {
 		g.setColor(Color.DARK_GRAY);
 		g.drawString(String.format("%04d", points.getPoints()), GAME_WIDTH - TILE_SIZE * 10, TILE_SIZE);
 		
-		g.drawString(prevPoints.toString(), RIGHT_LIMIT, TILE_SIZE * 2);
+		g.drawString(prevPoints.toString(), RIGHT_LIMIT + TILE_SIZE, TILE_SIZE * 2);
 	}
 
 	public void increaseBy(int obstaclePoints) {
