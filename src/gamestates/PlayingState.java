@@ -42,10 +42,8 @@ public class PlayingState implements State {
 	@Override
 	public void update() {
 		if (playerHit()) {
-			obstacles.destroy();
 			ContextSingleton.getContext().setGameOver(points.getScore());
 		}
-		obstacles.resume();
 		for (Drawable e : entities) {
 			e.update();
 		}
@@ -69,7 +67,6 @@ public class PlayingState implements State {
 	@Override
 	public void keyPressed(KeyEvent e) {
 		if (e.getKeyCode() == KeyEvent.VK_ESCAPE) {
-			obstacles.pause();
 			ContextSingleton.getContext().pause();
 			return;
 		}
