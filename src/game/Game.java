@@ -1,10 +1,11 @@
 package game;
 
+import static utliz.Constants.GameEngine.CLOCK_TIME;
+
 import inputs.KeyboardInputs;
 
 public class Game implements Runnable {
 
-	private final int FPS = 60;
 	private GamePanel panel;
 	private GameContext gameState = ContextSingleton.getContext();
 
@@ -45,7 +46,7 @@ public class Game implements Runnable {
 		long lastTimeCheck = System.currentTimeMillis();
 		while (true) {
 			double now = System.nanoTime();
-			if ((now - currentTime) > 1000000000.0 / FPS) {
+			if ((now - currentTime) > CLOCK_TIME) {
 				updateGame();
 				repaint();
 				iFPS++;

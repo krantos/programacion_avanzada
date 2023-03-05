@@ -1,6 +1,12 @@
 package utliz;
 
 public class Constants {
+	
+	public static class GameEngine {
+		public static final int FPS = 60;
+		public static final double CLOCK_TIME = 1000000000.0 / FPS;
+		public static final float DELTA_TIME = 1.0f / FPS;
+	}
 
 	public static class GameWindow {
 		public static final int TILES_REAL_SIZE = 16;
