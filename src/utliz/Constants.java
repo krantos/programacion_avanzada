@@ -2,6 +2,12 @@ package utliz;
 
 public class Constants {
 
+	public static class GameEngine {
+		public static final int FPS = 60;
+		public static final double CLOCK_TIME = 1000000000.0 / FPS;
+		public static final float DELTA_TIME = 1.0f / FPS;
+	}
+
 	public static class GameWindow {
 		public static final int TILES_REAL_SIZE = 16;
 		public static int SCALE = 2;
@@ -22,8 +28,8 @@ public class Constants {
 	}
 
 	public static class KRoad {
-		public static int LEFT_LIMIT = (int) Constants.GameWindow.TILE_SIZE * 2;
-		public static int RIGHT_LIMIT = (int) Constants.GameWindow.TILE_SIZE * 10;
+		public static int LEFT_LIMIT = Constants.GameWindow.TILE_SIZE * 2;
+		public static int RIGHT_LIMIT = Constants.GameWindow.TILE_SIZE * 10;
 	}
 
 }

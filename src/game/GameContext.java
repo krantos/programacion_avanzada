@@ -1,16 +1,27 @@
 package game;
 
+import entities.Points;
 import gamestates.GameOverState;
 import gamestates.PauseState;
 import gamestates.PlayingState;
 import gamestates.State;
+import storage.FileStorage;
+import storage.PointStorage;
 
 public class GameContext {
 
 	private State gameState = null;
-	private PlayingState playing = new PlayingState();
-	private PauseState pause = new PauseState();
-	private GameOverState gameOver = new GameOverState();
+	private PlayingState playing;
+	private PauseState pause;
+	private GameOverState gameOver;
+	private PointStorage pointStorage;
+
+	public GameContext() {
+		pause = new PauseState();
+		gameOver = new GameOverState();
+		pointStorage = new FileStorage();
+		playing = new PlayingState(pointStorage.readPoints());
+	}
 
 	public void setState(State state) {
 		gameState = state;
@@ -25,12 +36,13 @@ public class GameContext {
 	}
 
 	public void restart() {
-		playing = new PlayingState();
+		playing = new PlayingState(pointStorage.readPoints());
 		play();
 	}
 
-	public void gameOver(int points) {
-		gameOver.setPoints(points);
+	public void setGameOver(Points points) {
+		pointStorage.savePoints(points);
+		gameOver.setPoints(points.getPoints());
 		gameState = gameOver;
 	}
 

@@ -16,7 +16,7 @@ public class Player extends Hitbox implements Drawable {
 	private int speedY = 0;
 
 	public Player() {
-		super((int) ((RIGHT_LIMIT - LEFT_LIMIT) / 2), GAME_HEIGHT - TILE_SIZE - 2, TILE_SIZE, TILE_SIZE);
+		super((RIGHT_LIMIT - LEFT_LIMIT) / 2, GAME_HEIGHT - TILE_SIZE - 2, TILE_SIZE, TILE_SIZE);
 		initHitbox(x, y, TILE_SIZE, TILE_SIZE);
 		setOffsets(0, 0);
 	}
