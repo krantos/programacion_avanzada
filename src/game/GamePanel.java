@@ -1,8 +1,8 @@
-package checkingKnowledge;
+package game;
 
-import static checkingKnowledge.Constants.GameWindow.FONT_SIZE;
-import static checkingKnowledge.Constants.GameWindow.GAME_HEIGHT;
-import static checkingKnowledge.Constants.GameWindow.GAME_WIDTH;
+import static utliz.Constants.GameWindow.FONT_SIZE;
+import static utliz.Constants.GameWindow.GAME_HEIGHT;
+import static utliz.Constants.GameWindow.GAME_WIDTH;
 
 import java.awt.Color;
 import java.awt.Dimension;
@@ -10,6 +10,8 @@ import java.awt.Font;
 import java.awt.Graphics;
 
 import javax.swing.JPanel;
+
+import inputs.KeyboardInputs;
 
 public class GamePanel extends JPanel {
 

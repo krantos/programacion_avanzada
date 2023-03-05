@@ -1,4 +1,4 @@
-package checkingKnowledge;
+package game;
 
 public class ContextSingleton {
 

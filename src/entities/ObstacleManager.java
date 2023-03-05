@@ -1,9 +1,9 @@
-package checkingKnowledge;
+package entities;
 
-import static checkingKnowledge.Constants.GameWindow.GAME_HEIGHT;
-import static checkingKnowledge.Constants.GameWindow.TILE_SIZE;
-import static checkingKnowledge.Constants.KRoad.LEFT_LIMIT;
-import static checkingKnowledge.Constants.KRoad.RIGHT_LIMIT;
+import static utliz.Constants.GameWindow.GAME_HEIGHT;
+import static utliz.Constants.GameWindow.TILE_SIZE;
+import static utliz.Constants.KRoad.LEFT_LIMIT;
+import static utliz.Constants.KRoad.RIGHT_LIMIT;
 
 import java.awt.Graphics;
 import java.util.ArrayList;
@@ -43,7 +43,7 @@ public class ObstacleManager implements Drawable {
 	public void update() {
 		for (int i = 0; i < obstacles.size(); i++) {
 			obstacles.get(i).update();
-			if (obstacles.get(i).hitbox.y > GAME_HEIGHT) {
+			if (obstacles.get(i).getHitbox().y > GAME_HEIGHT) {
 				points.increaseBy(obstacles.get(i).getPoints());
 				obstacles.remove(i);
 			}

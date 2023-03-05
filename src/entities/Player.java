@@ -1,10 +1,10 @@
-package checkingKnowledge;
+package entities;
 
-import static checkingKnowledge.Constants.GameWindow.GAME_HEIGHT;
-import static checkingKnowledge.Constants.GameWindow.TILE_SIZE;
-import static checkingKnowledge.Constants.KRoad.LEFT_LIMIT;
-import static checkingKnowledge.Constants.KRoad.RIGHT_LIMIT;
-import static checkingKnowledge.Constants.Kplayer.SPEED;
+import static utliz.Constants.GameWindow.GAME_HEIGHT;
+import static utliz.Constants.GameWindow.TILE_SIZE;
+import static utliz.Constants.KRoad.LEFT_LIMIT;
+import static utliz.Constants.KRoad.RIGHT_LIMIT;
+import static utliz.Constants.Kplayer.SPEED;
 
 import java.awt.Color;
 import java.awt.Graphics;

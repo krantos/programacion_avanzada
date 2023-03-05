@@ -1,4 +1,6 @@
-package checkingKnowledge;
+package game;
+
+import inputs.KeyboardInputs;
 
 public class Game implements Runnable {
 

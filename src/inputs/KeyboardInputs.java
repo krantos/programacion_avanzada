@@ -1,7 +1,9 @@
-package checkingKnowledge;
+package inputs;
 
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+
+import game.ContextSingleton;
 
 public class KeyboardInputs implements KeyListener {
 

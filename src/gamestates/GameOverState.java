@@ -1,10 +1,12 @@
-package checkingKnowledge;
+package gamestates;
 
-import static checkingKnowledge.Constants.GameWindow.TILE_SIZE;
+import static utliz.Constants.GameWindow.TILE_SIZE;
 
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.event.KeyEvent;
+
+import game.ContextSingleton;
 
 public class GameOverState implements State {
 
