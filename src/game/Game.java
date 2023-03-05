@@ -11,7 +11,7 @@ public class Game implements Runnable {
 	Game() {
 		createGameWindow();
 		startGameLoop();
-		gameState.play();
+		gameState.restart();
 	}
 
 	private void createGameWindow() {

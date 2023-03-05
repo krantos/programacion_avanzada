@@ -9,6 +9,7 @@ import entities.Obstacle;
 import entities.ObstacleManager;
 import entities.Player;
 import entities.Points;
+import entities.PointsManager;
 import entities.Road;
 import game.ContextSingleton;
 
@@ -17,10 +18,12 @@ public class PlayingState implements State {
 	private ArrayList<Drawable> entities;
 	private ObstacleManager obstacles;
 	private Player player;
-	private Points points;
+	private PointsManager points;
 	private Road road;
+	private Points prevPoints;
 
-	public PlayingState() {
+	public PlayingState(Points prevPoints) {
+		this.prevPoints = prevPoints;
 		createEntities();
 	}
 
@@ -28,7 +31,7 @@ public class PlayingState implements State {
 		entities = new ArrayList<>();
 		road = new Road();
 		player = new Player();
-		points = new Points();
+		points = new PointsManager(prevPoints);
 		obstacles = new ObstacleManager(points);
 		entities.add(player);
 		entities.add(road);
@@ -40,7 +43,7 @@ public class PlayingState implements State {
 	public void update() {
 		if (playerHit()) {
 			obstacles.destroy();
-			ContextSingleton.getContext().gameOver(points.getScore());
+			ContextSingleton.getContext().setGameOver(points.getScore());
 		}
 		obstacles.resume();
 		for (Drawable e : entities) {

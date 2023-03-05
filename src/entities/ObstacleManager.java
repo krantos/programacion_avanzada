@@ -11,10 +11,10 @@ import java.util.ArrayList;
 public class ObstacleManager implements Drawable {
 
 	private ArrayList<Obstacle> obstacles;
-	private Points points;
+	private PointsManager points;
 	private ObstacleCreator obstacleCreator;
 
-	public ObstacleManager(Points points) {
+	public ObstacleManager(PointsManager points) {
 		this.points = points;
 		obstacles = new ArrayList<>();
 		obstacleCreator = new ObstacleCreator();
