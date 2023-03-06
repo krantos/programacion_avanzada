@@ -10,7 +10,9 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.event.KeyEvent;
 
-public class Player extends Hitbox implements Drawable {
+import inputs.KeyboardInterface;
+
+public class Player extends Hitbox implements Drawable, KeyboardInterface {
 
 	private int speedX = 0;
 	private int speedY = 0;

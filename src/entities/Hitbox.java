@@ -18,7 +18,7 @@ public class Hitbox {
 		this.height = height;
 	}
 
-	protected void initHitbox(float x, float y, float width, float height) {
+	protected final void initHitbox(float x, float y, float width, float height) {
 		this.hitbox = new Rectangle2D.Float(x, y, width, height);
 	}
 
@@ -27,11 +27,11 @@ public class Hitbox {
 		this.yOffset = yOffset;
 	}
 
-	public Rectangle2D.Float getHitbox() {
+	public final Rectangle2D.Float getHitbox() {
 		return this.hitbox;
 	}
 
-	public void drawHitbox(Graphics g) {
+	public final void drawHitbox(Graphics g) {
 		g.setColor(Color.DARK_GRAY);
 		g.drawRect((int) hitbox.x, (int) hitbox.y, (int) hitbox.width, (int) hitbox.height);
 	}

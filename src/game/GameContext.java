@@ -13,9 +13,9 @@ public class GameContext {
 	private static GameContext gameContext;
 	private State gameState = null;
 	private PlayingState playing;
-	private PauseState pause;
-	private GameOverState gameOver;
-	private PointStorage pointStorage;
+	private final PauseState pause;
+	private final GameOverState gameOver;
+	private final PointStorage pointStorage;
 
 	public static GameContext getContext() {
 		if (gameContext == null) {

@@ -16,18 +16,12 @@ import game.GameContext;
 public class PlayingState implements State {
 
 	private ArrayList<Drawable> entities;
-	private ObstacleManager obstacles;
-	private Player player;
-	private PointsManager points;
-	private Road road;
-	private Points prevPoints;
+	private final ObstacleManager obstacles;
+	private final Player player;
+	private final PointsManager points;
+	private final Road road;
 
 	public PlayingState(Points prevPoints) {
-		this.prevPoints = prevPoints;
-		createEntities();
-	}
-
-	private void createEntities() {
 		entities = new ArrayList<>();
 		road = new Road();
 		player = new Player();

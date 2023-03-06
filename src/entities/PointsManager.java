@@ -9,7 +9,7 @@ import java.awt.Graphics;
 
 public class PointsManager implements Drawable {
 
-	private Points points;
+	private final Points points;
 	private Points prevPoints;
 
 	public PointsManager(Points prevPoints) {

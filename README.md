@@ -64,3 +64,20 @@ Las interacciones entre estados son las siguientes:
 3. Presionando nuevamente **ESC** en el teclado, se reanuda la partida detenida.
 4. Si el avatar del jugador colisiona con un obstáculo la partida finaliza enseñando la pantalla de GameOver.
 5. Se inicia una nueva partida presionando la tecla **ESPACIO** del teclado.
+
+### **Class Diagram**
+
+
+**Game** 
+
+![3. Game](./res/game_uml.png)
+
+
+**States** 
+
+![4. States](./res/states_uml.png)
+
+
+**Entities** 
+
+![5. Entities](./res/entities_uml.png)
