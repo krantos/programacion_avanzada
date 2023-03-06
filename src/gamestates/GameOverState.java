@@ -6,7 +6,7 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.event.KeyEvent;
 
-import game.ContextSingleton;
+import game.GameContext;
 
 public class GameOverState implements State {
 
@@ -15,7 +15,7 @@ public class GameOverState implements State {
 	@Override
 	public void keyPressed(KeyEvent e) {
 		if (e.getKeyCode() == KeyEvent.VK_SPACE)
-			ContextSingleton.getContext().restart();
+			GameContext.getContext().restart();
 	}
 
 	@Override

@@ -6,7 +6,7 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.event.KeyEvent;
 
-import game.ContextSingleton;
+import game.GameContext;
 
 public class PauseState implements State {
 
@@ -24,7 +24,7 @@ public class PauseState implements State {
 	@Override
 	public void keyPressed(KeyEvent e) {
 		if (e.getKeyCode() == KeyEvent.VK_ESCAPE) {
-			ContextSingleton.getContext().play();
+			GameContext.getContext().play();
 		}
 	}
 

@@ -11,7 +11,7 @@ import entities.Player;
 import entities.Points;
 import entities.PointsManager;
 import entities.Road;
-import game.ContextSingleton;
+import game.GameContext;
 
 public class PlayingState implements State {
 
@@ -42,7 +42,7 @@ public class PlayingState implements State {
 	@Override
 	public void update() {
 		if (playerHit()) {
-			ContextSingleton.getContext().setGameOver(points.getScore());
+			GameContext.getContext().setGameOver(points.getScore());
 		}
 		for (Drawable e : entities) {
 			e.update();
@@ -67,7 +67,7 @@ public class PlayingState implements State {
 	@Override
 	public void keyPressed(KeyEvent e) {
 		if (e.getKeyCode() == KeyEvent.VK_ESCAPE) {
-			ContextSingleton.getContext().pause();
+			GameContext.getContext().pause();
 			return;
 		}
 		player.keyPressed(e);

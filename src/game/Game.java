@@ -7,12 +7,13 @@ import inputs.KeyboardInputs;
 public class Game implements Runnable {
 
 	private GamePanel panel;
-	private GameContext gameState = ContextSingleton.getContext();
+	private GameContext gameState;
 
 	Game() {
+		gameState = GameContext.getContext();
+		gameState.restart();
 		createGameWindow();
 		startGameLoop();
-		gameState.restart();
 	}
 
 	private void createGameWindow() {
