@@ -60,7 +60,7 @@ El juego cuenta con tres estados Playing, Pause y GameOver.
 Las interacciones entre estados son las siguientes:
 
 1. Se ejecuta el juego y entra en estado de Playing.
-2. Cuando se presiona la tecla ******ESC****** se detiene el juego y se enseña la pantalla de Pausa.
-3. Presionando nuevamente ******ESC****** en el teclado, se reanuda la partida detenida.
+2. Cuando se presiona la tecla **ESC** se detiene el juego y se enseña la pantalla de Pausa.
+3. Presionando nuevamente **ESC** en el teclado, se reanuda la partida detenida.
 4. Si el avatar del jugador colisiona con un obstáculo la partida finaliza enseñando la pantalla de GameOver.
 5. Se inicia una nueva partida presionando la tecla **ESPACIO** del teclado.
